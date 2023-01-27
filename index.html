@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cake shop</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <title>thecakeshop</title>
+    <link rel="stylesheet"
+        href="https://github.com/nicolas-cusan/destyle.css/blob/489e813950f67427c5e57f6c90d8c29ad07c9390/destyle.css">
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="/css/main.css"><!--CSSを読み込みます-->
+    <script src="https://static.spearly.com/js/cms.js" defer></script>
+    <script>window.addEventListener('DOMContentLoaded', () => { const t = document.querySelectorAll(':not(:defined)'); for (const e of t) { e.style.visibility = "hidden"; }; window.spearly.config.AUTH_KEY = "FgP-HhnBvvXoyUh2juqW2NSYrnxIoVP3xqAcH3wOWno" }, { once: true })</script>
 </head>
 
 <body>
     <header>
         <div class="header">
             <div class="header-container">
-                <h1 class="site-logo"><img src="/img/the cake.png"></h1>
+                <ul>
+                    <li cms-item cms-content-type="v3demo-site-logo" cms-content="logo-image">
+                        <img src="{%= v3demo-site-logo_logo %}" class="site-logo">
+                    </li>
+                </ul>
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#news"> Menu</a></li>
+                        <li><a href="#menu"> News</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -28,123 +36,37 @@
     </header>
 
     <main>
-        <div class="mainvisual">
-            <img src="/img/mainvisual.jpg">
-        </div>
-
+        <ul>
+            <li cms-item cms-content-type="v3demo-site-mainvisual" cms-content="mainvisual" class="main-visual">
+                <img src="{%= v3demo-site-mainvisual_image %}">
+            </li>
+        </ul>
 
         <section id="about" class="container">
             <h2 class="section-title">About</h2>
-            <div class="section-item">
-                <img src="/img/photo1.jpg" alt="" class="about-img">
-                <div class="text">
-                    <h3 class="title">the cake shop</h3>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                </div>
-            </div>
+            <ul>
+                <li cms-item cms-content-type="v3demo-site-shop" cms-content="shop" class="section-item">
+                    <img src="{%= v3demo-site-shop_shop-image %}" class="shop-image">
+                    <div class="text">
+                        <h3 class="title">{%= v3demo-site-shop_shop-title %}</h3>
+                        <p>{%= v3demo-site-shop_shop-text %}</p>
+                    </div>
+                </li>
+            </ul>
 
-            <div class="section-item section-item-place">
-                <div class="text">
-                    <h3 class="title">place</h3>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                </div>
-                <img src="/img/photo1.jpg" alt="" class="about-img">
-            </div>
-        </section>
-        </section>
-
-        <section id="news" class="container">
-            <h2 class="section-title">News</h2>
-            <ul class="news-list">
-                <li class="item">
-                    <a href="#">
-                        <p class="date">20XX/yy/dd</p>
-                        <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <p class="date">20XX/yy/dd</p>
-                        <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <p class="date">20XX/yy/dd</p>
-                        <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <p class="date">20XX/yy/dd</p>
-                        <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
-                    </a>
-                </li>
-                <li class="item">
-                    <a href="#">
-                        <p class="date">20XX/yy/dd</p>
-                        <p class="title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</p>
-                    </a>
+            <ul>
+                <li cms-item cms-content-type="v3demo-site-place" cms-content="place" class="section-item">
+                    <div class="text">
+                        <h3 class="title">{%= v3demo-site-place_shop-title %}</h3>
+                        <p>{%= v3demo-site-place_shop-text %}</p>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://maps.google.co.jp/maps?output=embed&t=m&hl=ja&z=18&ll={%= v3demo-site-place_shop-place_#latitude %},{%= v3demo-site-place_shop-place_#longitude %}&q={%= v3demo-site-place_shop-place_#address %}"
+                            frameborder="0" scrolling="no" width="auto"></iframe>
+                    </div>
                 </li>
             </ul>
         </section>
 
-        <section id="menu" class="container">
-            <h2 class="section-title">Menu</h2>
-            <ul class="menu-list">
-                <li><img src="/img/concept.jpg"></li>
-                <li><img src="/img/concept.jpg"></li>
-                <li><img src="/img/concept.jpg"></li>
-                <li><img src="/img/concept.jpg"></li>
-                <li><img src="/img/concept.jpg"></li>
-                <li><img src="/img/concept.jpg"></li>
-            </ul>
-        </section>
-
-        <section id="contact" class="container">
-            <h2 class="section-title">Contact</h2>
-            <form action="">
-                <table class="contact-table">
-                    <tr>
-                        <th class="contact-item">名前</th>
-                        <td class="contact-body">
-                            <input type="text" name="名前" class="form-text">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th class="contact-item">メール</th>
-                        <td class="contact-body">
-                            <input type="email" name="メール" class="form-text">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th class="contact-item">電話</th>
-                        <td class="contact-body">
-                            <input type="tel" name="電話" class="form-text">
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th class="contact-item">お問い合わせ内容</th>
-                        <td class="contact-body">
-                            <textarea name="問い合わせ" class="form-textarea"></textarea>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-            <input class="contact-submit" type="submit" value="送信">
-
-        </section>
     </main>
-
-    <footer id="footer">
-
-    </footer>
-
-</body>
-
-</html>
