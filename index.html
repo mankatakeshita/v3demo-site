@@ -8,7 +8,7 @@
     <title>thecakeshop</title>
     <link rel="stylesheet"
         href="https://github.com/nicolas-cusan/destyle.css/blob/489e813950f67427c5e57f6c90d8c29ad07c9390/destyle.css">
-    <!--リセjットCSS-->
+    <!--リセットCSS-->
     <link rel="stylesheet" href="/css/main.css"><!--CSSを読み込みます-->
     <script src="https://static.spearly.com/js/cms.js" defer></script>
     <script>window.addEventListener('DOMContentLoaded', () => { const t = document.querySelectorAll(':not(:defined)'); for (const e of t) { e.style.visibility = "hidden"; }; window.spearly.config.AUTH_KEY = "FgP-HhnBvvXoyUh2juqW2NSYrnxIoVP3xqAcH3wOWno" }, { once: true })</script>
@@ -68,5 +68,16 @@
                 </li>
             </ul>
         </section>
+
+        <section id="menu" class="container">
+            <h2 class="section-title">Menu</h2>
+            <ul class="menu-list">
+                <li cms-loop cms-content-type="v3demo-site-menu">
+                    <img data-src="{%= v3demo-site-menu_menu-image %}">
+                </li>
+            </ul>
+        </section>
+
+
 
     </main>
