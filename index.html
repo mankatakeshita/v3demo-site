@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>thecakeshop</title>
-    <link rel="stylesheet"
-        href="https://github.com/nicolas-cusan/destyle.css/blob/489e813950f67427c5e57f6c90d8c29ad07c9390/destyle.css">
+    <link rel="stylesheet" href="css/destyle.css">
     <!--リセットCSS-->
-    <link rel="stylesheet" href="/css/main.css"><!--CSSを読み込みます-->
+    <link rel="stylesheet" href="/v3cording/css/main.css"><!--CSSを読み込みます-->
     <script src="https://static.spearly.com/js/cms.js" defer></script>
     <script>window.addEventListener('DOMContentLoaded', () => { const t = document.querySelectorAll(':not(:defined)'); for (const e of t) { e.style.visibility = "hidden"; }; window.spearly.config.AUTH_KEY = "FgP-HhnBvvXoyUh2juqW2NSYrnxIoVP3xqAcH3wOWno" }, { once: true })</script>
 </head>
@@ -26,8 +25,8 @@
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#news"> Menu</a></li>
-                        <li><a href="#menu"> News</a></li>
+                        <li><a href="#menu"> Menu</a></li>
+                        <li><a href="#news"> News</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -76,6 +75,20 @@
                     <img data-src="{%= v3demo-site-menu_menu-image %}">
                 </li>
             </ul>
+        </section>
+
+        <section id="news" class="container">
+            <h2 class="section-title">News</h2>
+            <ul class="news-list">
+                <li cms-loop cms-content-type="v3demo-site-news">
+                    <p>{%= v3demo-site-news_news-calendar %}</p>
+                    <a href="/v3cording/news.html">
+                        <p>{%= v3demo-site-news_news-title %}</p>
+                    </a>
+                </li>
+            </ul>
+
+            </div>
         </section>
 
 

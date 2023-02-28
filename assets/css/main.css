@@ -152,7 +152,20 @@ img {
 }
 
 .menu-list img {
-    width: 280px;
-    height: 280px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
+}
+
+/*newsセクション*/
+
+.news-list {
+    font-size: 1rem;
+}
+
+.news-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 0.5px solid #24292e;
 }

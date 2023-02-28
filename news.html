@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cake shop</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="/news.css">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/v3cording/css/destyle.css">
+    <link rel="stylesheet" href="/v3cording/css/main.css">
+    <link rel="stylesheet" href="/v3cording/css/news.css">
+    <script src="https://static.spearly.com/js/cms.js" defer></script>
+    <script>window.addEventListener('DOMContentLoaded', () => { const t = document.querySelectorAll(':not(:defined)'); for (const e of t) { e.style.visibility = "hidden"; }; window.spearly.config.AUTH_KEY = "FgP-HhnBvvXoyUh2juqW2NSYrnxIoVP3xqAcH3wOWno" }, { once: true })</script>
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <header>
         <div class="header">
             <div class="header-container">
-                <h1 class="site-logo"><img src="/img/the cake.png"></h1>
+                <h1 class="site-logo"><img src="/v3cording/img/the cake.png"></h1>
                 <nav>
                     <ul>
                         <li><a href="#about">About</a></li>
@@ -33,19 +35,16 @@
     <main>
 
         <section id="news" class="container">
-            <div class="item">
-                <img src="/img/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg">
-                <p class="date">20XX/yy/dd</p>
-                <h2 class="item-title">ここにお知らせが入りますここにお知らせが入りますここにお知らせが入ります</h2>
-                <p>ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                    ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                    ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                    ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                    ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                    ここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入りますここに本文が入ります
-                </p>
+            <ul class="item">
+                <li cms-item cms-content-type="v3demo-site-news" cms-content="c-1MdxwLZDpUqrIl2Fgj0y">
+                    <img data-src="{%= v3demo-site-news_news-image %}">
+                    <p class="data">{%= v3demo-site-news_news-calendar %}</p>
+                    <h2 class="item-title">{%= v3demo-site-news_news-title %}</h2>
+                    <p>{%= v3demo-site-news_news-text %}</p>
+
+                </li>
                 <a href="/index.html">トップに戻る</a>
-            </div>
+            </ul>
         </section>
     </main>
 
